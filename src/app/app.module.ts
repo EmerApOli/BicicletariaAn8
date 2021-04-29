@@ -19,6 +19,7 @@ import { UsuarioReportComponent } from './componente/usuario/usuario-report/usua
 import {ChartsModule} from 'ng2-charts';
 import { BarChartComponent } from './componente/bar-chart/bar-chart.component';
 import { FornecedorComponent } from './componente/fornecedor/fornecedor/fornecedor.component';
+import { FornecedorAddComponent } from './componente/Fornecedor/fornecedor-add/fornecedor-add.component';
 
 
 export const appRouters: Routes = [
@@ -30,6 +31,8 @@ export const appRouters: Routes = [
   { path: 'fornecedorList', component: FornecedorComponent, canActivate: [GuardiaoGuard] },
   { path: 'usuarioAdd', component: UsuarioAddComponent, canActivate: [GuardiaoGuard] },
   { path: 'usuarioAdd/:id', component: UsuarioAddComponent, canActivate: [GuardiaoGuard] },
+  { path: 'fornecedorAdd', component: FornecedorAddComponent, canActivate: [GuardiaoGuard] },
+  { path: 'fornecedorAdd/:id', component: FornecedorAddComponent, canActivate: [GuardiaoGuard] },
   { path: 'userReport', component: UsuarioReportComponent, canActivate: [GuardiaoGuard] },
   { path: 'chart', component: BarChartComponent, canActivate: [GuardiaoGuard] },
 ];
@@ -48,7 +51,8 @@ export const optionsMask: Partial<IConfig> | (() => Partial<IConfig>) = {};
     UsuarioAddComponent,
     UsuarioReportComponent,
     BarChartComponent,
-    FornecedorComponent
+    FornecedorComponent,
+    FornecedorAddComponent
   ],
   imports: [
     BrowserModule,
