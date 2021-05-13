@@ -9,5 +9,7 @@ export class AppConstants {
 	public static get getBaseUrlPath() : string {return this.baseServidor + "cursospringrestapi/"}
     
 	public static get baseUrlfor(): string {return this.baseServidor + "cursospringrestapi/fornecedor/"}
+	
+	public static get baseUrlprod(): string {return this.baseServidor + "cursospringrestapi/produto/"}
 
 }

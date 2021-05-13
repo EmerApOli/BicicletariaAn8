@@ -87,7 +87,6 @@ export class FornecedorAddComponent implements OnInit {
 
   fornecedor = new Fornecedor();
 
-  telefone = new Telefone();
 
   profissoes : Array<Profissao>;
 
@@ -117,19 +116,19 @@ export class FornecedorAddComponent implements OnInit {
 
     if (this.fornecedor.id != null && this.fornecedor.id.toString().trim() != null) { /* Atualizando ou Editando*/
       this.fornecedorService.updateFornecedor(this.fornecedor).subscribe(data => {
-        this.novo();
+       
         console.info("Fornecedor Atualizado: " + data);
       });
     } else {
       this.fornecedorService.salvarFornecedor(this.fornecedor).subscribe(data => { /*Salvando um novo User */
-        this.novo();
+       
         console.info("Gravou User: " + data);
       });
     }
   }
 
 
-  deletarTelefone(id, i) {
+ /* deletarTelefone(id, i) {
 
     if (id == null) {
       this.fornecedor.telefones.splice(i, 1);
@@ -162,7 +161,7 @@ export class FornecedorAddComponent implements OnInit {
   novo() {
     
     this.telefone = new Telefone();
-  }
+  }*/
 
 }
 

@@ -26,7 +26,7 @@ export class FornecedorComponent implements OnInit {
 
     if (confirm('Deseja mesmo remover?')) {
 
-      this.fornecedorService.deletarFornecedor(id).subscribe(data => {
+      this.fornecedorService.deleteFornecedor(id).subscribe(data => {
         //console.log("Retorno do método delete : " + data);
 
         this.fornecedores.splice(index, 1); /*Remover da tela*/

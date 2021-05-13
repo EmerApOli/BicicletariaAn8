@@ -20,6 +20,7 @@ import {ChartsModule} from 'ng2-charts';
 import { BarChartComponent } from './componente/bar-chart/bar-chart.component';
 import { FornecedorComponent } from './componente/fornecedor/fornecedor/fornecedor.component';
 import { FornecedorAddComponent } from './componente/Fornecedor/fornecedor-add/fornecedor-add.component';
+import { ProdutoComponent } from './componente/produto/produto/produto.component';
 
 
 export const appRouters: Routes = [
@@ -29,6 +30,7 @@ export const appRouters: Routes = [
   { path: '', component: LoginComponent },
   { path: 'userList', component: UsuarioComponent, canActivate: [GuardiaoGuard] },
   { path: 'fornecedorList', component: FornecedorComponent, canActivate: [GuardiaoGuard] },
+  { path: 'produtoList', component: ProdutoComponent, canActivate: [GuardiaoGuard] },
   { path: 'usuarioAdd', component: UsuarioAddComponent, canActivate: [GuardiaoGuard] },
   { path: 'usuarioAdd/:id', component: UsuarioAddComponent, canActivate: [GuardiaoGuard] },
   { path: 'fornecedorAdd', component: FornecedorAddComponent, canActivate: [GuardiaoGuard] },
@@ -52,7 +54,8 @@ export const optionsMask: Partial<IConfig> | (() => Partial<IConfig>) = {};
     UsuarioReportComponent,
     BarChartComponent,
     FornecedorComponent,
-    FornecedorAddComponent
+    FornecedorAddComponent,
+    ProdutoComponent,
   ],
   imports: [
     BrowserModule,

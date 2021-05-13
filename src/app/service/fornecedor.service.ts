@@ -32,7 +32,7 @@ export class FornecedorService {
   }
 
 
-  deletarFornecedor(id: Number): Observable<any> {
+  deleteFornecedor(id: Number): Observable<any> {
     return this.http.delete(AppConstants.baseUrlfor + id, { responseType: 'text' });
   }
 
@@ -59,6 +59,9 @@ export class FornecedorService {
     return this.http.put<any>(AppConstants.baseUrlfor, fornecedor);
   }
 
+  //updateUsuario(user): Observable<any> {
+  //  return this.http.put<any>(AppConstants.baseUrl, user);
+  //}
 
 
   removerTelefonte(id): Observable<any> {
