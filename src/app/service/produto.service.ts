@@ -28,7 +28,7 @@ export class ProdutoService {
 
 
   deletarProduto(id: Number): Observable<any> {
-    return this.http.delete(AppConstants.baseUrl + id, { responseType: 'text' });
+    return this.http.delete(AppConstants.baseUrlprod + id, { responseType: 'text' });
   }
 
 

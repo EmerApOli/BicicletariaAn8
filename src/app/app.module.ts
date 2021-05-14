@@ -21,6 +21,7 @@ import { BarChartComponent } from './componente/bar-chart/bar-chart.component';
 import { FornecedorComponent } from './componente/fornecedor/fornecedor/fornecedor.component';
 import { FornecedorAddComponent } from './componente/Fornecedor/fornecedor-add/fornecedor-add.component';
 import { ProdutoComponent } from './componente/produto/produto/produto.component';
+import { ProdutoAddComponent } from './componente/produto/produto-add/produto-add.component';
 
 
 export const appRouters: Routes = [
@@ -31,7 +32,10 @@ export const appRouters: Routes = [
   { path: 'userList', component: UsuarioComponent, canActivate: [GuardiaoGuard] },
   { path: 'fornecedorList', component: FornecedorComponent, canActivate: [GuardiaoGuard] },
   { path: 'produtoList', component: ProdutoComponent, canActivate: [GuardiaoGuard] },
+  { path: 'produtoAdd', component: ProdutoAddComponent, canActivate: [GuardiaoGuard] },
+  { path: 'produtoAdd/:id', component: ProdutoAddComponent, canActivate: [GuardiaoGuard] },
   { path: 'usuarioAdd', component: UsuarioAddComponent, canActivate: [GuardiaoGuard] },
+  
   { path: 'usuarioAdd/:id', component: UsuarioAddComponent, canActivate: [GuardiaoGuard] },
   { path: 'fornecedorAdd', component: FornecedorAddComponent, canActivate: [GuardiaoGuard] },
   { path: 'fornecedorAdd/:id', component: FornecedorAddComponent, canActivate: [GuardiaoGuard] },
@@ -56,6 +60,7 @@ export const optionsMask: Partial<IConfig> | (() => Partial<IConfig>) = {};
     FornecedorComponent,
     FornecedorAddComponent,
     ProdutoComponent,
+    ProdutoAddComponent,
   ],
   imports: [
     BrowserModule,

@@ -10,7 +10,7 @@ import { ProdutoService } from '../../../service/produto.service';
 export class ProdutoComponent implements OnInit {
 
   produtos: Array<Produto[]>;
-  nome: String;
+   nome: String;
   total: number;
   p: number;
 
@@ -26,7 +26,7 @@ export class ProdutoComponent implements OnInit {
   }
 
 
-  deleteUsuario(id: Number, index) {
+  deleteProduto(id: Number, index) {
 
     if (confirm('Deseja mesmo remover?')) {
 
