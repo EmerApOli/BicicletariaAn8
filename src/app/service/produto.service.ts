@@ -16,6 +16,10 @@ export class ProdutoService {
   }
 
   
+  getFornecedorList(): Observable<any> {
+    return this.http.get<any>(AppConstants.getBaseUrlPath + 'fornecedor/');
+  
+  }
 
   getProdutoListPage(pagina): Observable<any> {
     return this.http.get<any>(AppConstants.baseUrlprod + 'page/' + pagina);

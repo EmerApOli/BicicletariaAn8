@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Fornecedor } from 'src/app/model/Fornecedor';
 import { Produto } from 'src/app/model/Produto';
 import { ProdutoService } from 'src/app/service/produto.service';
+import { async } from '@angular/core/testing';
+import { element } from 'protractor';
+import { environment } from '../../../../environments/environment.prod';
 
 @Component({
   selector: 'app-produto-add',
@@ -11,7 +15,7 @@ import { ProdutoService } from 'src/app/service/produto.service';
 export class ProdutoAddComponent implements OnInit {
   produto = new Produto();
 
-
+  fornecedores : Array<Fornecedor>;
  
 
   constructor(private routeActive: ActivatedRoute, private produtoService: ProdutoService) {
@@ -19,7 +23,10 @@ export class ProdutoAddComponent implements OnInit {
 
 
   ngOnInit() {
-  
+    
+    this.produtoService.getFornecedorList().subscribe(data => {
+      this.fornecedores = data;
+    });
      
 
     let id = this.routeActive.snapshot.paramMap.get('id');
