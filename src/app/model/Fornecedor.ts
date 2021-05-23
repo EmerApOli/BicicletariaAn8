@@ -1,4 +1,4 @@
-import { Telefone } from './Telefone';
+
 
 export class Fornecedor {
 

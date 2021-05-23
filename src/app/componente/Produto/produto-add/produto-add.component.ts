@@ -25,7 +25,7 @@ export class ProdutoAddComponent implements OnInit {
   ngOnInit() {
     
     this.produtoService.getFornecedorList().subscribe(data => {
-      this.fornecedores = data;
+      this.fornecedores = data.content;
     });
      
 
