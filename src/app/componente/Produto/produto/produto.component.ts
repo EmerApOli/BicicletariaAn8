@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Produto } from '../../../model/Produto';
 import { ProdutoService } from '../../../service/produto.service';
+import { async } from '@angular/core/testing';
 
 @Component({
   selector: 'app-produto',
@@ -9,7 +11,8 @@ import { ProdutoService } from '../../../service/produto.service';
 })
 export class ProdutoComponent implements OnInit {
 
-  produtos: Array<Produto[]>;
+  produtos: Produto[] = [];
+  produtocar: Produto[] = [];
    nome: String;
   total: number;
   p: number;
@@ -22,8 +25,24 @@ export class ProdutoComponent implements OnInit {
       this.produtos = data.content;
       this.total = data.totalElements;
     });
+ }
 
-  }
+
+ /*addCart(produtos: Produto){
+  onprogress.async()
+  this.cartService.addItem(produtos)
+ onprogress.toString();
+}
+
+addToCart(produtos: Produto) {
+
+  console.log(this.produtos);
+  this.cartService.addItem(this.produtos)
+  
+  }*/
+
+ 
+
 
 
   deleteProduto(id: Number, index) {

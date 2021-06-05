@@ -23,6 +23,9 @@ import { FornecedorAddComponent } from './componente/Fornecedor/fornecedor-add/f
 import { ProdutoComponent } from './componente/produto/produto/produto.component';
 import { ProdutoAddComponent } from './componente/produto/produto-add/produto-add.component';
 
+import { PedidoComponent } from './componente/pedido/pedido/pedido.component';
+import { PedidoAdd } from './componente/Pedido/Add-Pedido/add-pedido.component';
+
 
 export const appRouters: Routes = [
 
@@ -33,6 +36,8 @@ export const appRouters: Routes = [
   { path: 'fornecedorList', component: FornecedorComponent, canActivate: [GuardiaoGuard] },
   { path: 'produtoList', component: ProdutoComponent, canActivate: [GuardiaoGuard] },
   { path: 'produtoAdd', component: ProdutoAddComponent, canActivate: [GuardiaoGuard] },
+  { path: 'pedidoAdd', component: PedidoAdd, canActivate: [GuardiaoGuard] },
+  { path: 'pedidoList', component: PedidoComponent, canActivate: [GuardiaoGuard] },
   { path: 'produtoAdd/:id', component: ProdutoAddComponent, canActivate: [GuardiaoGuard] },
   { path: 'usuarioAdd', component: UsuarioAddComponent, canActivate: [GuardiaoGuard] },
   
@@ -61,6 +66,8 @@ export const optionsMask: Partial<IConfig> | (() => Partial<IConfig>) = {};
     FornecedorAddComponent,
     ProdutoComponent,
     ProdutoAddComponent,
+     PedidoComponent,
+    
   ],
   imports: [
     BrowserModule,
