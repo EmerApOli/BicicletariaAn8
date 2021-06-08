@@ -3,7 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { Produto } from '../../../model/Produto';
 import { ProdutoService } from '../../../service/produto.service';
 import { async } from '@angular/core/testing';
-
+import {default as NProgress} from 'nprogress'
+import { CartService } from 'src/app/cart/cart.service';
 @Component({
   selector: 'app-produto',
   templateUrl: './produto.component.html',
@@ -11,13 +12,13 @@ import { async } from '@angular/core/testing';
 })
 export class ProdutoComponent implements OnInit {
 
-  produtos: Produto[] = [];
-  produtocar: Produto[] = [];
+  produtos: Produto[] ;
+  //produtocar: Produto[] = [];
    nome: String;
   total: number;
   p: number;
 
-  constructor(private produtoService: ProdutoService) { }
+  constructor(private produtoService: ProdutoService, private cartService: CartService) { }
 
   ngOnInit() {
 
@@ -78,7 +79,11 @@ addToCart(produtos: Produto) {
     }
   }
 
-
+  addCart(Product){
+    NProgress.start()
+    this.cartService.addItem(Product)
+    NProgress.done()
+  }
 
 
   carregarPagina(pagina) {

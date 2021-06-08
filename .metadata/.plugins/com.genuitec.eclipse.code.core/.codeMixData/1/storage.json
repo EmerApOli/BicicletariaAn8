@@ -1,0 +1,14 @@
+{
+    "telemetry.machineId": "b4d74f9b2af2dbf3a1f48bcd5381f4ac92c2658d90b1fd83c80a6960ae273397",
+    "openedPathsList": {
+        "workspaces3": [
+            {
+                "id": "582d5711290995409b90cccd3c46f191",
+                "configURIPath": "file:///c%3A/curso_java/Curso-Angular-REST/.metadata/codemix.code-workspace"
+            }
+        ],
+        "files2": []
+    },
+    "theme": "vs-dark",
+    "themeBackground": "#1e1e1e"
+}

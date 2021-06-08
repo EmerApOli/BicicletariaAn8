@@ -1,0 +1,27 @@
+{
+  
+  "cursospringrestapi":[
+    {
+  "profissao": [
+    {
+      "id" : 1,
+	"descricao": "analista"
+    }
+  ],
+  "fornecedor": [
+    {
+      
+    "id": 1,
+    "cnpj": "22294033892",
+    "nome": "teste",
+    "dataCadastro": "2021-01-01",
+    "razao_social":"reweww"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+    }
+  
+  ]
+}

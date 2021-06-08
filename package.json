@@ -29,8 +29,11 @@
     "ngx-currency": "^2.2.2",
     "ngx-mask": "^8.1.7",
     "ngx-pagination": "^5.0.0",
+    "nprogress": "^0.2.0",
     "popper.js": "^1.14.3",
-    "rxjs": "~6.5.4",
+    "rxjs": "^6.5.5",
+    "sweetalert": "^2.1.2",
+    "sweetalert2": "^11.0.16",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },

@@ -1,1 +1,48 @@
-<div><h1></h1></div>
+
+
+<section class="container-fluid" id="content">
+  	<div class="row row-eq-height" id="row-content">
+		<div *ngFor="let item of produtos" class="col-12 col-sm-12 col-md-4 mb-4">
+			<div class="card">
+				<div class="row card-block">
+					<div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-1 thumbs">
+						<ul class="list-unstyled list-thumbnail">
+							
+						</ul>
+					</div>
+				
+					<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-8">
+						<h5 class="product-title">{{item.nome}} <i class="fa fa-heart-o"></i></h5>
+						<div class="clear-fix divider"></div>
+						<span class="badge badge-primary">MELHOR PREÇO</span>
+						<div class="price">
+							<div class="row">
+								<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+									<h2 class="text-success">
+                    <small>
+                      {{item.valor.installments}}x
+                    </small>
+                    {{item.valor.installmentValue | currency: 'BRL': true}}
+                  </h2>
+									<h5>
+                    ou <span class="text-success">{{item.valor.value | currency: 'BRL': true}}</span> à vista
+                  </h5>
+								</div>
+								<div class="col-12 col-sm-12 col-md-12 col-lg-12col-xl-6">
+									<button type="button" class="btn btn-success btn-sm btn-add" (click)="addCart(item)">
+										Adicionar ao carrinho
+                    <i class="fa fa-chevron-right"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+

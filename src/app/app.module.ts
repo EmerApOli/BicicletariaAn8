@@ -25,6 +25,7 @@ import { ProdutoAddComponent } from './componente/produto/produto-add/produto-ad
 
 import { PedidoComponent } from './componente/pedido/pedido/pedido.component';
 import { PedidoAdd } from './componente/Pedido/Add-Pedido/add-pedido.component';
+import { CardProductComponent } from './card-product/card-product.component';
 
 
 export const appRouters: Routes = [
@@ -40,7 +41,7 @@ export const appRouters: Routes = [
   { path: 'pedidoList', component: PedidoComponent, canActivate: [GuardiaoGuard] },
   { path: 'produtoAdd/:id', component: ProdutoAddComponent, canActivate: [GuardiaoGuard] },
   { path: 'usuarioAdd', component: UsuarioAddComponent, canActivate: [GuardiaoGuard] },
-  
+  { path: 'produtocar', component: CardProductComponent, canActivate: [GuardiaoGuard] },
   { path: 'usuarioAdd/:id', component: UsuarioAddComponent, canActivate: [GuardiaoGuard] },
   { path: 'fornecedorAdd', component: FornecedorAddComponent, canActivate: [GuardiaoGuard] },
   { path: 'fornecedorAdd/:id', component: FornecedorAddComponent, canActivate: [GuardiaoGuard] },
@@ -67,6 +68,8 @@ export const optionsMask: Partial<IConfig> | (() => Partial<IConfig>) = {};
     ProdutoComponent,
     ProdutoAddComponent,
      PedidoComponent,
+     CardProductComponent
+     
     
   ],
   imports: [
